@@ -1,0 +1,22 @@
+mport java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class VowelConsonantChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        if (!Character.isLetter(ch)) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        char chUpper = Character.toUpperCase(ch);
+
+        if (chUpper == 'A' || chUpper == 'E' || chUpper == 'I' || chUpper == 'O' || chUpper == 'U') {
+            System.out.println("The Character " + ch + " is Vowel");
+        } else {
+            System.out.println("The Character " + ch + " is Consonant");
+        }
+    }
+}
