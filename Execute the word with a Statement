@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class LearnLanguage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String input = scanner.nextLine();
+        scanner.close();
+        String firstWord = input.split(" ")[0];
+        System.out.println("May I know how to learn " + firstWord + "!!!...");
+    }
+}
