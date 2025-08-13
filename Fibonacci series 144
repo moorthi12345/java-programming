@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class FibonacciRangeSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+
+        if (n < 1 || n > 20 || m < 1 || m > 20) {
+            System.out.println("Invalid Input");
+            return;
+        }
+
+        if (n > m) {
+            int temp = n;
+            n = m;
+            m = temp;
+        }
+        int[] fib = new int[m + 1];
+        fib[0] = 0;
+        if (m >= 1) fib[1] = 1;
+
+    }
+}
