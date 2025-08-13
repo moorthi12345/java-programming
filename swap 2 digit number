@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SwapFirstTwoDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        // Check if input length is at least 2
+        if (input.length() < 2) {
+            // No output if input is less than 2 digits
+            return;
+        }
+
+        // Extract first two digits
+        char firstDigit = input.charAt(0);
+        char secondDigit = input.charAt(1);
+
+        // Swap the two digits and print
+        System.out.println("" + secondDigit + firstDigit);
+    }
+}
