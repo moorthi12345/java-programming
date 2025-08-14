@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class FindFriendHome {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] doorNumbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            doorNumbers[i] = scanner.nextInt();
+        }
+        int friendAddress = scanner.nextInt();
+        boolean found = false;
+        for (int door : doorNumbers) {
+            if (door == friendAddress) {
+                System.out.printf("Door Number is %03d-DN\n", door);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("-1");
+        }
+        scanner.close();
+    }
+}
